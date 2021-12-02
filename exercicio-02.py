@@ -15,21 +15,22 @@ valor_morango = 0
 valor_total = 0
 
 if peso_maca <= 5: 
-    print(f'O valor a ser pago é R${peso_maca*1.80}')
+    print(f'O valor a ser pago pela maça é R$ {peso_maca*1.80:.2f}')
     valor_maca = peso_maca*1.80
 elif (peso_maca > 5):
-    print(f'O valor a ser pago é R${peso_maca*1.50}')
+    print(f'O valor a ser pago pela maça é R$ {peso_maca*1.50:.2f}')
     valor_maca = peso_maca*1.50
 
 if peso_morango <= 5:
-    print(f'O valor a ser pago é R${peso_morango*2.50}')
+    print(f'O valor a ser pago pelo morango é R$ {peso_morango*2.50:.2f}')
     valor_morango = peso_morango*2.50
 elif peso_morango > 5:
-    print(f'O valor a ser pago é R${peso_morango*2.20}')
+    print(f'O valor a ser pago pelo morango é R$ {peso_morango*2.20:.2f}')
     valor_morango = peso_morango*2.20
 
 if (peso_maca + peso_morango) > 8 or (valor_maca + valor_morango) > 25:
     valor_total = (valor_maca + valor_morango)*0.90
-    print(f"valor_total")   
-
-    
+    print(f"O valor total a ser pago com desconto é de R$ {valor_total:.2f}")
+else: 
+    valor_total = (valor_maca + valor_morango)
+    print(f"O valor total a ser pago sem desconto é de R$ {valor_total:.2f}")
