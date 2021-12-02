@@ -12,6 +12,7 @@ peso_maca = float(input("Informe peso da maça: "))
 peso_morango = float(input("Informe peso do morango: "))
 valor_maca = 0
 valor_morango = 0
+valor_total = 0
 
 if peso_maca <= 5: 
     print(f'O valor a ser pago é R${peso_maca*1.80}')
@@ -26,3 +27,9 @@ if peso_morango <= 5:
 elif peso_morango > 5:
     print(f'O valor a ser pago é R${peso_morango*2.20}')
     valor_morango = peso_morango*2.20
+
+if (peso_maca + peso_morango) > 8 or (valor_maca + valor_morango) > 25:
+    valor_total = (valor_maca + valor_morango)*0.90
+    print(f"valor_total")   
+
+    
